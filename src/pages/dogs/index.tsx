@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function DogsPage({
   dogs,
 }: {
@@ -14,9 +12,9 @@ export default function DogsPage({
       <ul>
         {dogs?.map(dog => (
           <li key={dog.id}>
-            <Link href={`/hunder/${dog.id}`}>
+            <a href={`/hunder/${dog.id}`}>
               {dog.attributes.name}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
